@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Location on Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show Location on Map</h1>
+    <div id="map"></div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize Leaflet map
+        var map = L.map('map').setView([0, 0], 13); // Default view at (0,0) with zoom level 13
+
+        // Add online OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to get user's location and display on map
+        function getLocationAndShowOnMap() {
+            const status = document.getElementById('status');
+            const location = document.getElementById('location');
+
+            if (!navigator.geolocation) {
+                status.textContent = 'Geolocation is not supported by your browser';
+            } else {
+                status.textContent = 'Locating…';
+                navigator.geolocation.getCurrentPosition(success, error);
+            }
+
+            function success(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // Update map view and add marker
+                map.setView([latitude, longitude], 13); // Set map view to user's location with zoom level 13
+                L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup('You are here')
+                    .openPopup();
+
+                status.textContent = '';
+                location.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+            }
+
+            function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`);
+                if (err.code === err.PERMISSION_DENIED) {
+                    status.innerHTML = 'Geolocation permission denied. Please enable location access for this site in your browser settings.';
+                } else {
+                    status.textContent = `Unable to retrieve your location (${err.message})`;
+                }
+            }
+        }
+    </script>
+
+    <!-- Button to trigger location fetch -->
+    <button onclick="getLocationAndShowOnMap()">Get Location</button>
+    <p id="status"></p>
+    <p id="location"></p>
+</body>
+</html>
