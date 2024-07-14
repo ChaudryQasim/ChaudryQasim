@@ -121,7 +121,9 @@ footer {
     align-items: center;
     margin-top: 20px;
 }
-
+.control-row {
+    display: flex;
+}
 .control-button {
     width: 60px;
     height: 60px;
