@@ -1,26 +1,24 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-const box = 32;
-const canvasSize = 12;
+const box = 20;
+const canvasSize = 16; // Adjusted for a smaller playing area
 let snake = [];
-snake[0] = { x: 9 * box, y: 10 * box };
+snake[0] = { x: 8 * box, y: 8 * box }; // Start the snake in the center
 
 let direction;
 let food = {
-    x: Math.floor(Math.random() * canvasSize + 1) * box,
-    y: Math.floor(Math.random() * canvasSize + 3) * box
+    x: Math.floor(Math.random() * canvasSize) * box,
+    y: Math.floor(Math.random() * canvasSize) * box
 };
 
-// Logging to see if events are captured
 document.addEventListener("keydown", directionChange);
-document.getElementById("up").addEventListener("click", () => { console.log("Up pressed"); directionChange({ keyCode: 38 }); });
-document.getElementById("down").addEventListener("click", () => { console.log("Down pressed"); directionChange({ keyCode: 40 }); });
-document.getElementById("left").addEventListener("click", () => { console.log("Left pressed"); directionChange({ keyCode: 37 }); });
-document.getElementById("right").addEventListener("click", () => { console.log("Right pressed"); directionChange({ keyCode: 39 }); });
+document.getElementById("up").addEventListener("click", () => directionChange({ keyCode: 38 }));
+document.getElementById("down").addEventListener("click", () => directionChange({ keyCode: 40 }));
+document.getElementById("left").addEventListener("click", () => directionChange({ keyCode: 37 }));
+document.getElementById("right").addEventListener("click", () => directionChange({ keyCode: 39 }));
 
 function directionChange(event) {
-    console.log("Direction change:", event.keyCode);
     if (event.keyCode === 37 && direction !== "RIGHT") {
         direction = "LEFT";
     } else if (event.keyCode === 38 && direction !== "DOWN") {
@@ -65,8 +63,8 @@ function draw() {
 
     if (snakeX === food.x && snakeY === food.y) {
         food = {
-            x: Math.floor(Math.random() * canvasSize + 1) * box,
-            y: Math.floor(Math.random() * canvasSize + 3) * box
+            x: Math.floor(Math.random() * canvasSize) * box,
+            y: Math.floor(Math.random() * canvasSize) * box
         };
     } else {
         snake.pop();
@@ -74,6 +72,7 @@ function draw() {
 
     let newHead = { x: snakeX, y: snakeY };
 
+    // Check for collision with walls and snake body
     if (
         snakeX < 0 ||
         snakeY < 0 ||
