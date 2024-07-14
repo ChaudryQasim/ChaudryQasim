@@ -1,130 +1,48 @@
+/* Add these styles to styles.css */
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 5px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
-}
-
-h1, h2, h3, h4 {
-    margin-bottom: 5px;
-}
-
-article {
-    max-width: 800px;
-    width: 100%;
-    padding: 40px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-article ul, article ol {
-    background-color: #f4f4f4;	
+    justify-content: center;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    padding-left: 20px;
 }
 
-article pre {
-    background-color: #f4f4f4;
-    padding: 5px;
-    border-radius: 5px;
-    overflow-x: auto;
+header nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-#game {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
-}
-
-.cell {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    background-color: #fff;
-    border: 2px solid #000;
-    cursor: pointer;
-}
-
-.cell:hover {
-    background-color: #f0f0f0;
-}
-
-.game-links {
-    display: flex;
-    gap: 20px;
-}
-
-.game-link {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+header nav ul li a {
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    color: #333;
 }
 
-.game-link:hover {
-    background-color: #555;
+canvas {
+    border: 1px solid #333;
 }
+
 #controls {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
+.control-row {
+    display: flex;
+}
+
 .control-button {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     font-size: 16px;
     border: none;
@@ -136,4 +54,8 @@ footer {
 
 .control-button:hover {
     background-color: #555;
+}
+
+footer {
+    margin-top: 20px;
 }
