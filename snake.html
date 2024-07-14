@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="snake.js"></script>
 </head>
 <body>
     <header>
@@ -13,13 +14,19 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="snake.html">Snake Game</a></li>
                 <li><a href="tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                <li><a href="README.html">README</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Snake Game</h1>
         <canvas id="gameCanvas" width="400" height="400"></canvas>
-        <script src="snake.js"></script>
+        <div id="controls">
+            <button id="up" class="control-button">Up</button>
+            <button id="left" class="control-button">Left</button>
+            <button id="right" class="control-button">Right</button>
+            <button id="down" class="control-button">Down</button>
+        </div>
     </main>
     <footer>
         <p>TM &copy; qasim2k3gmail.com - All Rights Reserved</p>
