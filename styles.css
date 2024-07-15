@@ -66,14 +66,14 @@ nav ul li {
             text-decoration: none;
 }
 
-a: link {
+nav ul li a: link {
             font-weight: bold;
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
             font-size: 1rem;
             color: #ffe599;
 }
-a:visited {
+nav ul li a:visited {
             font-weight: bold;
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
@@ -81,7 +81,7 @@ a:visited {
             color: #ffe599;
 }
 
-a:hover {
+nav ul li a:hover {
     text-decoration: white;
 }
 
