@@ -46,7 +46,6 @@ header {
 }
 
 nav ul {
-            list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
@@ -64,7 +63,6 @@ nav ul li {
 
 nav ul li a {
             color: #fff;
-            text-decoration: none;
             font-weight: bold;
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
@@ -95,7 +93,6 @@ article {
     max-width: 800px;
     width: 100%;
     padding: 40px;
-    background-color: #f4f4f4;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -108,14 +105,13 @@ article ul, article ol {
 }
 
 article pre {
-    background-color: #f4f4f4;
     padding: 5px;
     border-radius: 5px;
     overflow-x: auto;
 }
  p {
             font-size: 1rem;
-            color: #4ecca3;
+            color: #319675;
             font-family: "Indie Flower", cursive;
         }
 
