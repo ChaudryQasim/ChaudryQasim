@@ -78,11 +78,11 @@ nav ul li a:visited {
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
             font-size: 1rem;
-            color: #FF0000;
+            color: #ffe599;
 }
 
 nav ul li a:hover {
-    text-decoration: none;
+    text-decoration: white;
 }
 
 main {
