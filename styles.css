@@ -20,7 +20,7 @@
   
         .butn {
             background: #4ecca3;
-            font-family: "Indie Flower", cursive;
+            font-family: "Lobster", cursive;
             border-radius: 7px;
             color: #ffff;
             font-size: 30px;
@@ -34,7 +34,7 @@
         }
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Lobster", cursive;
     background-color: #042f4b;
     color: #333;
 }
@@ -136,6 +136,7 @@ article pre {
 
 footer {
     background-color: #333;
+    font-family: "Lobster", cursive;
     color: #fff;
     text-align: center;
     position: fixed;
