@@ -63,12 +63,19 @@ nav ul li {
             color: #4ecca3;
 }
 
-nav ul li a {
+nav ul li a:link {
             font-weight: bold;
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
             font-size: 1rem;
             color: #4ecca3;
+}
+nav ul li a:visited {
+            font-weight: bold;
+            font-family: "Lobster", cursive;
+            text-shadow: 5px 0 #232931;
+            font-size: 1rem;
+            color: #FFFF00;
 }
 
 nav ul li a:hover {
