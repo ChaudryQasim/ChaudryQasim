@@ -82,7 +82,7 @@ ul li a:visited {
 }
 
 ul li a:hover {
-    text-decoration: white;
+    text-decoration: #FFFF00;
 }
 
 main {
