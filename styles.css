@@ -62,6 +62,7 @@ nav ul li {
             text-shadow: 5px 0 #232931;
             font-size: 1rem;
             color: #4ecca3;
+            text-decoration: none;
 }
 
 nav ul li a:link {
