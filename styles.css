@@ -42,7 +42,9 @@ body {
 header {
     list-style: none;
     background-color: #333;
+    text-shadow: 5px 0 #232931;
     color: #ffe599;
+    font-weight: bold;     
     padding: 5px 0;
 }
 
