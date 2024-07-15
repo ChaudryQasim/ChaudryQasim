@@ -100,12 +100,14 @@ article {
 }
 
 article ul, article ol {
-    background-color: #042f4b;
-    color: #319675;
+    font-family: "Lobster", cursive;
+    text-shadow: 5px 0 #232931;
+    font-size: 1.5rem;
+    color: #4ecca3;
     margin: 0;
     padding: 0;
     padding-left: 20px;
-}
+    }
 
 article pre {
     padding: 5px;
