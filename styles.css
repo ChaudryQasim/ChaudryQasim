@@ -10,13 +10,7 @@
             margin: 10px;
         }
   
-        p {
-            font-size: 1rem;
-            color: #4ecca3;
-            font-family: "Indie Flower", cursive;
-        }
-  
-        img {
+       img {
             width: 100%;
         }
   
@@ -83,7 +77,7 @@ h1, h2, h3, h4 {
             margin-bottom: 5px;
             font-family: "Lobster", cursive;
             text-shadow: 5px 0 #232931;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: #4ecca3;
             text-align: center;
         }
@@ -110,6 +104,11 @@ article pre {
     border-radius: 5px;
     overflow-x: auto;
 }
+ p {
+            font-size: 1rem;
+            color: #4ecca3;
+            font-family: "Indie Flower", cursive;
+        }
 
 footer {
     background-color: #333;
