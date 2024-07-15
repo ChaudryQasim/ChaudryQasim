@@ -155,7 +155,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1em;
+    font-size: 3em;
     background-color: #00b4d8;
     border: 2px solid #000;
     cursor: pointer;
