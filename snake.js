@@ -40,7 +40,7 @@ function collision(newHead, array) {
 }
 
 function draw() {
-    ctx.fillStyle = "lightgreen";
+    ctx.fillStyle = "#D4AF37";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < snake.length; i++) {
